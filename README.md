@@ -14,7 +14,7 @@ A simple Flask-based application for tracking daily expenses.
 
 
 ```sh 
-conda create -n freestyle-env-2024 python=3.10 -y
+conda create -n freestyle-env-2024 python=3.10
 ```
 
 ```sh
