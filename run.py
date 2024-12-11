@@ -10,3 +10,10 @@ app.register_blueprint(budget_bp, url_prefix="/budget")
 # Existing code remains unchanged
 if __name__ == '__main__':
     app.run(port=5000)
+
+from app import create_app
+
+app = create_app()
+
+if __name__ == '__main__':
+    app.run()
