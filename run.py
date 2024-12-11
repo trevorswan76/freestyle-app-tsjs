@@ -1,8 +1,12 @@
-from app import create_app
-from app.routes import init_routes
+from flask import Flask
+from app.budget import budget_bp  # Import the budget blueprint
 
-app = create_app()
-init_routes(app)
+app = Flask(__name__)
+app.secret_key = 'your_secret_key'  # Ensure this is secure for production
 
+# Register the budget blueprint
+app.register_blueprint(budget_bp, url_prefix="/budget")
+
+# Existing code remains unchanged
 if __name__ == '__main__':
     app.run(port=5000)
